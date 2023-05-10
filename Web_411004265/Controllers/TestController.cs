@@ -17,5 +17,9 @@ namespace Web_411004265.Controllers
         {
             return View();
         }
+        public ActionResult HW11()
+        {
+            return View();
+        }
     }
 }

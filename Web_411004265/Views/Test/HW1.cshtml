@@ -7,15 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <br /><br />
-    ©m¦W:<input type="text" /><br /><br />
-    ±b¸¹:<input type="text" /><br /><br />
-    ±K½X:<input type="password" /><br /> <br />
-    ©Ê§O:<input type="radio" />¨k©Ê
-    <input type="radio" />¤k©Ê<br /><br />
-    ¿³½ì :<input type="checkbox" />´åªa
-    <input type="checkbox" />¾\Åª
-    <input type="checkbox" />¬İ¹q¼v<br /><br />
-    ¦Û§Ú¤¶²Ğ:<textarea></textarea>
+        @using (Html.BeginForm("Test", "Controller", FormMethod.Post))
+        {
+            <div>
+                <br /><br />
+                å§“å:<input type="text" /><br /><br />
+                å¸³è™Ÿ:<input type="text" /><br /><br />
+                å¯†ç¢¼:<input type="password" /><br /> <br />
+                æ€§åˆ¥:<input type="radio" value="ç”·æ€§" />ç”·æ€§
+                <input type="radio" value="å¥³æ€§" />å¥³æ€§<br /><br />
+                èˆˆè¶£ :<input type="checkbox" name="aa[]" />æ¸¸æ³³
+                <input type="checkbox" name="aa[]" />é–±è®€
+                <input type="checkbox" name="aa[]" />çœ‹é›»å½±<br /><br />
+                è‡ªæˆ‘ä»‹ç´¹:<textarea></textarea>
+                <input type="submit" />
+                <p>&copy; @DateTime.Now.Year - æˆ‘çš„ ASP.NET æ‡‰ç”¨ç¨‹å¼</p>
+            </div>
+        }
 </body>
 </html>

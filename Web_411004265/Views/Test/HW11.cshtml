@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @{
+        var success = false;
+        var message = "ff";
+        string[] fruits = { "蘋果", "香蕉", "荔枝", "鳳梨", "西瓜" };
+
+    }
+    @using (Html.BeginForm("Test", "Controller", FormMethod.Post))
+    {
+        <div>
+            <br /><br />
+            姓名:<input type="text" /><br /><br />
+            帳號:<input type="text" /><br /><br />
+            密碼:<input type="password" /><br /> <br />
+            性別:<input type="radio" value="男性" />男性
+            <input type="radio" value="女性" />女性<br /><br />
+            興趣 :<input type="checkbox" name="aa[]" />游泳
+            <input type="checkbox" name="aa[]" />閱讀
+            <input type="checkbox" name="aa[]" />看電影<br /><br />
+            自我介紹:<textarea></textarea>
+            <input type="submit" />
+
+        </div>
+    }
+    <ol>
+        @for (int i = 0; i < fruits.Length; i++)
+        {
+            <li>
+                 @fruits[i]
+            </li>
+        }
+    </ol>
+
+
+    @if (success == true)
+    {
+        <p>成功</p>
+
+    }
+    else
+    {
+        <p>失敗</p>
+        <p>@message</p>
+        <p> @DateTime.Now</p>
+    }
+</body>
